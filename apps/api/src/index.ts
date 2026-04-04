@@ -2,6 +2,9 @@ import { app } from './app'
 import { env } from './config/env'
 import { logger } from './lib/logger'
 import { prisma } from './lib/prisma'
+import dotenv from 'dotenv'
+
+dotenv.config({ path: '.env.local' })
 
 async function bootstrap(): Promise<void> {
   // Verificar conexión a la DB antes de exponer el servidor
