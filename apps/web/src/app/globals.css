@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cinzel: 'Cinzel', serif;
+  --font-crimson: 'Crimson Pro', serif;
+  --font-mono: 'Fira Code', 'Fira Mono', monospace;
+}
+
+/* Reducir movimiento para accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Scrollbar estilizada */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #09090f; }
+::-webkit-scrollbar-thumb { background: #2a2a4a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #fbbf24; }
+
+/* Focus ring consistente */
+:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
